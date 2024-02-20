@@ -1,3 +1,7 @@
+
+// Saya Marvel Ravindra Dioputra [2200481] LatPrak2 Java dalam Mata Kuliah DPBO 
+// untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
