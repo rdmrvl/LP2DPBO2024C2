@@ -2,23 +2,25 @@
 // Saya Marvel Ravindra Dioputra [2200481] LatPrak2 Java dalam Mata Kuliah DPBO 
 // untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.ArrayList; //library unttuk arraylist
+import java.util.List;      //library untuk linkedlist
+import java.util.Scanner;   //library agar dapat menerima inputan user
 
+//class parent dari class clothing
 class Product {
-    String idProduct;
-    String name;
-    String brand;
-    String price;
+    String idProduct;   //atribut id produk
+    String name;        //atribut nama produk
+    String brand;       //atribut merk produk
+    String price;       //atribut harga produk
 
     public Product(String idProduct, String name, String brand, String price) {
-        this.idProduct = idProduct;
-        this.name = name;
-        this.brand = brand;
-        this.price = price;
+        this.idProduct = idProduct; //inisialisasi id 
+        this.name = name;           //inisialisasi nama
+        this.brand = brand;         //inisialisasi merk
+        this.price = price;         //inisialisasi harga
     }
 
+    //getter dan setter untuk atribut diatas
     public String getId() {
         return idProduct;
     }
@@ -52,18 +54,20 @@ class Product {
     }
 }
 
+//Class parent dari class shirt
 class Clothing extends Product {
-    String size;
-    String material;
-    String gender;
+    String size;        //atribut ukuran baju
+    String material;    //atribut material/bahan baju
+    String gender;      //atribut untuk jenis kelamin preferensi pada baju
 
     public Clothing(String idProduct, String name, String brand, String price, String size, String material, String gender) {
-        super(idProduct, name, brand, price);
-        this.size = size;
-        this.material = material;
-        this.gender = gender;
+        super(idProduct, name, brand, price);   //inisialisasi atribut dari class parent class Product
+        this.size = size;           //inisialisasi ukuran baju
+        this.material = material;   //inisialisasi material baju        
+        this.gender = gender;       //inisialisasi jenis untuk jenis kelamin
     }
 
+    //getter dan setter
     public String getSize() {
         return size;
     }
@@ -89,16 +93,18 @@ class Clothing extends Product {
     }
 }
 
+//Class cucu dar class parent
 class Shirt extends Clothing {
-    String color;
-    String sleeveType;
+    String color;       //atribut warna baju
+    String sleeveType;  //atribut jenis/panjang lengan
 
     public Shirt(String idProduct, String name, String brand, String price, String size, String material, String gender, String color, String sleeveType) {
-        super(idProduct, name, brand, price, size, material, gender);
-        this.color = color;
-        this.sleeveType = sleeveType;
+        super(idProduct, name, brand, price, size, material, gender);   //inisialisasi atribut dari class parent
+        this.color = color;             //inisialisasi warna
+        this.sleeveType = sleeveType;   //inisialisasi jenis/panjang lengan
     }
 
+    //getter dan setter
     public String getColor() {
         return color;
     }
@@ -116,15 +122,17 @@ class Shirt extends Clothing {
     }
 }
 
+//main
 public class Main {
     public static void main(String[] args) {
-        List<Shirt> shirts = new ArrayList<>();
-        Scanner scanner = new Scanner(System.in);
+        List<Shirt> shirts = new ArrayList<>();     //list untuk menampung data object class shirt inputan user
+        Scanner scanner = new Scanner(System.in);   //menyiapkan scanner agar user dapat menginputkan masukan
 
         System.out.print("Masukan jumlah baju: ");
-        int n = scanner.nextInt();
+        int n = scanner.nextInt();      //input jumlah data yang ingin dimasukan
         scanner.nextLine();
 
+        //memasukan setiap data object shirt kedalam list sebanyak "n" yang telah di inputkan
         for (int i = 0; i < n; i++) {
             System.out.println("Masukan Data " + (i + 1) + ":");
             System.out.print("ID: ");
@@ -150,6 +158,7 @@ public class Main {
             shirts.add(shirt);
         }
 
+        //menampilkan data yang telah dimasukan kedalam list dalam bentuk tabel
         System.out.println("+----+--------------+--------------+--------------+--------------+--------------+--------------+---------+-------------+");
         System.out.println("| No |      ID      |     Name     |     Brand    |    Color     |    Price     |     Size     | Gender  | Sleeve Type |");
         System.out.println("+----+--------------+--------------+--------------+--------------+--------------+--------------+---------+-------------+");
