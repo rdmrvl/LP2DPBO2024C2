@@ -117,12 +117,14 @@ class Shirt extends Clothing {
 }
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         List<Shirt> shirts = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
+
         System.out.print("Masukan jumlah baju: ");
         int n = scanner.nextInt();
-        scanner.nextLine(); 
+        scanner.nextLine();
+
         for (int i = 0; i < n; i++) {
             System.out.println("Masukan Data " + (i + 1) + ":");
             System.out.print("ID: ");
@@ -147,16 +149,16 @@ public class Main {
             Shirt shirt = new Shirt(id, name, brand, price, size, material, gender, color, sleeveType);
             shirts.add(shirt);
         }
-        
-        System.out.println("+----+--------------+--------------+--------------+--------------+---------+");
-        System.out.println("| No |     ID       |     Name     |    Brand     |    Price     |  Size   |");
-        System.out.println("+----+--------------+--------------+--------------+--------------+---------+");
+
+        System.out.println("+----+--------------+--------------+--------------+--------------+--------------+--------------+---------+-------------+");
+        System.out.println("| No |      ID      |     Name     |     Brand    |    Color     |    Price     |     Size     | Gender  | Sleeve Type |");
+        System.out.println("+----+--------------+--------------+--------------+--------------+--------------+--------------+---------+-------------+");
         int i = 1;
         for (Shirt shirt : shirts) {
-            System.out.printf("| %-2d | %-12s | %-12s | %-12s | %-12s | %-7s |\n",
-                    i, shirt.getId(), shirt.getName(), shirt.getBrand(), shirt.getPrice(), shirt.getSize());
+            System.out.printf("| %-2d | %-12s | %-12s | %-12s | %-12s | %-12s | %-12s | %-7s | %-11s |\n",
+                    i, shirt.getId(), shirt.getName(), shirt.getBrand(), shirt.getColor(), shirt.getPrice(), shirt.getSize(), shirt.getGender(), shirt.getSleeveType());
             i++;
         }
-        System.out.println("+----+--------------+--------------+--------------+--------------+---------+");        
+        System.out.println("+----+--------------+--------------+--------------+--------------+--------------+--------------+---------+-------------+");
     }
 }
