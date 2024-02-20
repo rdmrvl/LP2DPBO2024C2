@@ -8,3 +8,6 @@ Membuat kode Object Oriented Programming, memebuat kode yang mengimplementasikan
 
 Penjelasan kode secara keseluruhan. Program meminta pengguna untuk memasukkan jumlah objek Shirt yang ingin dibuat. Perulangan for dijalankan sebanyak jumlah tersebut.
 lalu objek shirt dibuatDi dalam perulangan, program meminta pengguna untuk memasukkan data setiap objek Shirt, seperti ID, nama, merek, harga, ukuran, bahan, warna, dan jenis lengan. Data tersebut digunakan untuk membuat objek Shirt baru. Objek Shirt baru ditambahkan ke ArrayList yang bernama shirts. Kemudian menampilkan tabel yang berisi informasi dari semua objek Shirt dalam list shirts.
+
+![readme](https://github.com/rdmrvl/LP2DPBO2024C2/assets/64513644/4a4e5f9b-f789-438a-bbe3-b11b3ff96e10)
+
