@@ -1,5 +1,4 @@
 # LP2DPBO2024C2
-
 Latihan Praktikum 2 DPBO
 
 Saya Marvel Ravindra Dioputra [2200481] LatPrak2 dalam Mata Kuliah DPBO untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
